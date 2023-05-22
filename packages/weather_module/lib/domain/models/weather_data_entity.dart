@@ -1,4 +1,4 @@
-class WeatherEntity {
+class WeatherDataEntity {
   CoordEntity? coord;
   List<WeatherEntity>? weather;
   String? base;
@@ -13,7 +13,7 @@ class WeatherEntity {
   String? name;
   int? cod;
 
-  WeatherEntity(
+  WeatherDataEntity(
       {this.coord,
         this.weather,
         this.base,

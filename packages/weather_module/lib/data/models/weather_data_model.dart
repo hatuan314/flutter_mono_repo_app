@@ -1,51 +1,53 @@
-import 'package:weather_module/domain/models/weather_entity.dart';
+import 'package:weather_module/domain/models/weather_data_entity.dart';
 
-class WeatherModel extends WeatherEntity {
+class WeatherDataModel extends WeatherDataEntity {
+  WeatherDataModel(
+      CoordModel? coord,
+      List<WeatherModel>? weather,
+      String? base,
+      MainModel? main,
+      int? visibility,
+      WindModel? wind,
+      CloudsModel? clouds,
+      int? dt,
+      SysModel? sys,
+      int? timezone,
+      int? id,
+      String? name,
+      int? cod)
+      : super(
+            coord: coord,
+            weather: weather,
+            base: base,
+            main: main,
+            visibility: visibility,
+            wind: wind,
+            clouds: clouds,
+            dt: dt,
+            sys: sys,
+            timezone: timezone,
+            id: id,
+            name: name,
+            cod: cod);
 
-  WeatherModel(Coord? coord,
-  List<Weather>? weather,
-  String? base,
-  Main? main,
-  int? visibility,
-  Wind? wind,
-  Clouds? clouds,
-  int? dt,
-  Sys? sys,
-  int? timezone,
-  int? id,
-  String? name,
-  int? cod) : super(
-    coord: coord,
-    weather: weather,
-    base: base,
-    main: main,
-    visibility: visibility,
-    wind: wind,
-    clouds: clouds,
-    dt: dt,
-    sys: sys,
-    timezone: timezone,
-    id: id,
-    name: name,
-    cod: cod
-  );
-
-  WeatherModel.fromJson(Map<String, dynamic> json) {
-    coord = json['coord'] != null ? new Coord.fromJson(json['coord']) : null;
+  WeatherDataModel.fromJson(Map<String, dynamic> json) {
+    coord =
+        json['coord'] != null ? CoordModel.fromJson(json['coord']) : null;
     if (json['weather'] != null) {
-      weather = <Weather>[];
+      weather = <WeatherModel>[];
       json['weather'].forEach((v) {
-        weather!.add(new Weather.fromJson(v));
+        weather!.add(WeatherModel.fromJson(v));
       });
     }
     base = json['base'];
-    main = json['main'] != null ? new Main.fromJson(json['main']) : null;
+    main = json['main'] != null ? MainModel.fromJson(json['main']) : null;
     visibility = json['visibility'];
-    wind = json['wind'] != null ? new Wind.fromJson(json['wind']) : null;
-    clouds =
-    json['clouds'] != null ? new Clouds.fromJson(json['clouds']) : null;
+    wind = json['wind'] != null ? WindModel.fromJson(json['wind']) : null;
+    clouds = json['clouds'] != null
+        ? CloudsModel.fromJson(json['clouds'])
+        : null;
     dt = json['dt'];
-    sys = json['sys'] != null ? new Sys.fromJson(json['sys']) : null;
+    sys = json['sys'] != null ? SysModel.fromJson(json['sys']) : null;
     timezone = json['timezone'];
     id = json['id'];
     name = json['name'];
@@ -53,27 +55,25 @@ class WeatherModel extends WeatherEntity {
   }
 }
 
-class Coord {
-  double? lon;
-  double? lat;
+class CoordModel extends CoordEntity {
 
-  Coord({this.lon, this.lat});
+  CoordModel({double? lon, double? lat}) : super(lon:lon, lat: lat);
 
-  Coord.fromJson(Map<String, dynamic> json) {
+  CoordModel.fromJson(Map<String, dynamic> json) {
     lon = json['lon'];
     lat = json['lat'];
   }
 }
 
-class Weather {
-  int? id;
-  String? main;
-  String? description;
-  String? icon;
+class WeatherModel extends WeatherEntity {
+  WeatherModel({
+    int? id,
+    String? main,
+    String? description,
+    String? icon,
+  }) : super(id: id, main: main, description: description, icon: icon);
 
-  Weather({this.id, this.main, this.description, this.icon});
-
-  Weather.fromJson(Map<String, dynamic> json) {
+  WeatherModel.fromJson(Map<String, dynamic> json) {
     id = json['id'];
     main = json['main'];
     description = json['description'];
@@ -81,27 +81,27 @@ class Weather {
   }
 }
 
-class Main {
-  double? temp;
-  double? feelsLike;
-  double? tempMin;
-  double? tempMax;
-  int? pressure;
-  int? humidity;
-  int? seaLevel;
-  int? grndLevel;
+class MainModel extends MainEntity {
+  MainModel({
+    double? temp,
+    double? feelsLike,
+    double? tempMin,
+    double? tempMax,
+    int? pressure,
+    int? humidity,
+    int? seaLevel,
+    int? grndLevel,
+  }) : super(
+            temp: temp,
+            feelsLike: feelsLike,
+            tempMin: tempMin,
+            tempMax: tempMax,
+            pressure: pressure,
+            humidity: humidity,
+            seaLevel: seaLevel,
+            grndLevel: grndLevel);
 
-  Main(
-      {this.temp,
-        this.feelsLike,
-        this.tempMin,
-        this.tempMax,
-        this.pressure,
-        this.humidity,
-        this.seaLevel,
-        this.grndLevel});
-
-  Main.fromJson(Map<String, dynamic> json) {
+  MainModel.fromJson(Map<String, dynamic> json) {
     temp = json['temp'];
     feelsLike = json['feels_like'];
     tempMin = json['temp_min'];
@@ -113,40 +113,45 @@ class Main {
   }
 }
 
-class Wind {
+class WindModel extends WindEntity {
   double? speed;
   int? deg;
   double? gust;
 
-  Wind({this.speed, this.deg, this.gust});
+  WindModel({double? speed, int? deg, double? gust})
+      : super(speed: speed, deg: deg, gust: gust);
 
-  Wind.fromJson(Map<String, dynamic> json) {
+  WindModel.fromJson(Map<String, dynamic> json) {
     speed = json['speed'];
     deg = json['deg'];
     gust = json['gust'];
   }
 }
 
-class Clouds {
-  int? all;
+class CloudsModel extends CloudsEntity {
+  CloudsModel({int? all}) : super(all: all);
 
-  Clouds({this.all});
-
-  Clouds.fromJson(Map<String, dynamic> json) {
+  CloudsModel.fromJson(Map<String, dynamic> json) {
     all = json['all'];
   }
 }
 
-class Sys {
+class SysModel extends SysEntity {
   int? type;
   int? id;
   String? country;
   int? sunrise;
   int? sunset;
 
-  Sys({this.type, this.id, this.country, this.sunrise, this.sunset});
+  SysModel({int? type, int? id, String? country, int? sunrise, int? sunset})
+      : super(
+            type: type,
+            id: id,
+            country: country,
+            sunrise: sunrise,
+            sunset: sunset);
 
-  Sys.fromJson(Map<String, dynamic> json) {
+  SysModel.fromJson(Map<String, dynamic> json) {
     type = json['type'];
     id = json['id'];
     country = json['country'];

@@ -1,8 +1,9 @@
 import 'package:geolocator/geolocator.dart';
 import 'package:weather_module/common/injection/app_injection.dart';
+import 'package:weather_module/domain/models/weather_data_entity.dart';
 import 'package:weather_module/domain/usecases/interfaces/weather_usecase.dart';
 
-class WeatherService {
+class WeatherController {
   Future<Position> _getCurrentPosition() async {
     bool serviceEnabled;
     LocationPermission permission;
@@ -40,10 +41,10 @@ class WeatherService {
     return await Geolocator.getCurrentPosition();
   }
 
-  getCurrentWeather() async {
+  Future<WeatherDataEntity> getCurrentWeather() async {
     Position currentPosition = await _getCurrentPosition();
     double lat = currentPosition.latitude;
     double long = currentPosition.longitude;
-    getIt<WeatherUseCase>().getCurrentWeather(lat, long);
+    return getIt<WeatherUseCase>().getCurrentWeather(lat, long);
   }
 }

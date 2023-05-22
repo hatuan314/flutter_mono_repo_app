@@ -1,7 +1,13 @@
 library weather_module;
 
+import 'package:geolocator/geolocator.dart';
+import 'package:weather_module/domain/usecases/interfaces/weather_usecase.dart';
+
+import 'common/injection/app_injection.dart';
+
 /// A Calculator.
-class Calculator {
-  /// Returns [value] plus 1.
-  int addOne(int value) => value + 1;
+class WeatherModule {
+  static void initial() {
+    configLocator();
+  }
 }
