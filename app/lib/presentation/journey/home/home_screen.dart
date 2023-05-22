@@ -10,7 +10,6 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double buttonWidth = MediaQuery.of(context).size.width / 3;
     return Scaffold(
       appBar: AppBar(
         // Here we take the value from the MyHomePage object that was created by
@@ -21,16 +20,17 @@ class HomeScreen extends StatelessWidget {
         // Center is a layout widget. It takes a single child and positions it
         // in the middle of the parent.
         child: Row(
+          mainAxisSize: MainAxisSize.min,
           children: [
             AppTouchable(
-                width: buttonWidth,
+                width: 52.sp,
                 height: 52.sp,
                 onPressed: () {
                   Navigator.pushNamed(context, AppRoutes.weather);
                 },
                 child: AppImageWidget(
                   path: ImageConstants.icWeather,
-                  width: 24.sp,
+                  width: 28.sp,
                 ))
           ],
         ),

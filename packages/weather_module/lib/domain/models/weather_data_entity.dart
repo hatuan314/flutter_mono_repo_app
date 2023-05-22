@@ -15,18 +15,18 @@ class WeatherDataEntity {
 
   WeatherDataEntity(
       {this.coord,
-        this.weather,
-        this.base,
-        this.main,
-        this.visibility,
-        this.wind,
-        this.clouds,
-        this.dt,
-        this.sys,
-        this.timezone,
-        this.id,
-        this.name,
-        this.cod});
+      this.weather,
+      this.base,
+      this.main,
+      this.visibility,
+      this.wind,
+      this.clouds,
+      this.dt,
+      this.sys,
+      this.timezone,
+      this.id,
+      this.name,
+      this.cod});
 }
 
 class CoordEntity {
@@ -57,13 +57,13 @@ class MainEntity {
 
   MainEntity(
       {this.temp,
-        this.feelsLike,
-        this.tempMin,
-        this.tempMax,
-        this.pressure,
-        this.humidity,
-        this.seaLevel,
-        this.grndLevel});
+      this.feelsLike,
+      this.tempMin,
+      this.tempMax,
+      this.pressure,
+      this.humidity,
+      this.seaLevel,
+      this.grndLevel});
 }
 
 class WindEntity {

@@ -31,8 +31,7 @@ class WeatherDataModel extends WeatherDataEntity {
             cod: cod);
 
   WeatherDataModel.fromJson(Map<String, dynamic> json) {
-    coord =
-        json['coord'] != null ? CoordModel.fromJson(json['coord']) : null;
+    coord = json['coord'] != null ? CoordModel.fromJson(json['coord']) : null;
     if (json['weather'] != null) {
       weather = <WeatherModel>[];
       json['weather'].forEach((v) {
@@ -43,9 +42,8 @@ class WeatherDataModel extends WeatherDataEntity {
     main = json['main'] != null ? MainModel.fromJson(json['main']) : null;
     visibility = json['visibility'];
     wind = json['wind'] != null ? WindModel.fromJson(json['wind']) : null;
-    clouds = json['clouds'] != null
-        ? CloudsModel.fromJson(json['clouds'])
-        : null;
+    clouds =
+        json['clouds'] != null ? CloudsModel.fromJson(json['clouds']) : null;
     dt = json['dt'];
     sys = json['sys'] != null ? SysModel.fromJson(json['sys']) : null;
     timezone = json['timezone'];
@@ -56,8 +54,7 @@ class WeatherDataModel extends WeatherDataEntity {
 }
 
 class CoordModel extends CoordEntity {
-
-  CoordModel({double? lon, double? lat}) : super(lon:lon, lat: lat);
+  CoordModel({double? lon, double? lat}) : super(lon: lon, lat: lat);
 
   CoordModel.fromJson(Map<String, dynamic> json) {
     lon = json['lon'];

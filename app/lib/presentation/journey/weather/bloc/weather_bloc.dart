@@ -14,5 +14,4 @@ class WeatherBloc extends Cubit<WeatherState> {
     WeatherDataEntity data = await service.getCurrentWeather();
     emit(state.copyWith(loading: false, data: data));
   }
-
 }

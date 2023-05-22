@@ -33,9 +33,18 @@ class WeatherScreen extends StatelessWidget {
                   path: ImageConstants.icCloudNotif,
                   width: MediaQuery.of(context).size.width / 3,
                 ),
-                Text('Temp: ${state.data?.main?.temp}K', style: ThemeText.bodyText2,),
-                Text('Feels like: ${state.data?.main?.feelsLike}K', style: ThemeText.bodyText2,),
-                Text('Location: ${state.data?.name}, ${state.data?.sys?.country}', style: ThemeText.bodyText2,),
+                Text(
+                  'Temp: ${state.data?.main?.temp}K',
+                  style: ThemeText.bodyText2,
+                ),
+                Text(
+                  'Feels like: ${state.data?.main?.feelsLike}K',
+                  style: ThemeText.bodyText2,
+                ),
+                Text(
+                  'Location: ${state.data?.name}, ${state.data?.sys?.country}',
+                  style: ThemeText.bodyText2,
+                ),
               ],
             );
           },

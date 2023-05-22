@@ -2,11 +2,11 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:connectivity_plus/connectivity_plus.dart';
+import 'package:countries_module/common/constants/enums.dart';
+import 'package:countries_module/common/utils/app_utils.dart';
+import 'package:countries_module/data/models/base_response.dart';
 import 'package:dio/dio.dart';
 import 'package:pretty_dio_logger/pretty_dio_logger.dart';
-import 'package:weather_module/common/constants/enums.dart';
-import 'package:weather_module/common/utils/app_utils.dart';
-import 'package:weather_module/data/models/base_response.dart';
 
 import 'network_config.dart';
 

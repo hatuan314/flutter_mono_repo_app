@@ -11,5 +11,4 @@ class WeatherUseCaseImpl implements WeatherUseCase {
     WeatherDataEntity entity = await repo.getCurrentWeather(lon, lat);
     return entity;
   }
-
 }

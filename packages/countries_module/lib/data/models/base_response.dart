@@ -10,7 +10,8 @@ class BaseResponse {
 
   Response? dioResponse;
 
-  BaseResponse({this.code, this.data, this.message, this.result, this.errorCode});
+  BaseResponse(
+      {this.code, this.data, this.message, this.result, this.errorCode});
 
   factory BaseResponse.fromJson(Map<String, dynamic> json, Function? create) {
     return BaseResponse(
@@ -23,10 +24,10 @@ class BaseResponse {
   }
 
   Map<String, dynamic> toJson() => {
-    'code': code,
-    'data': data,
-    'message': message,
-    'result': result,
-    'errorCode': errorCode,
-  };
+        'code': code,
+        'data': data,
+        'message': message,
+        'result': result,
+        'errorCode': errorCode,
+      };
 }

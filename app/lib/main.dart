@@ -5,7 +5,6 @@ import 'package:weather_module/weather_module.dart';
 import 'common/injection/app_location.dart';
 import 'presentation/app.dart';
 
-
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   configLocator();

@@ -5,7 +5,6 @@ import 'package:todo_module/todo_model.dart';
 
 /// A Calculator.
 class TodoModule {
-
   static Future<void> initial() async {
     await Hive.initFlutter();
     Hive.registerAdapter(TodoAdapter());

@@ -29,7 +29,7 @@ class TodoService {
   Future<void> getAllTodoList() async {
     var box = await Hive.openBox<Todo>('todoBox');
     List<Todo> todoList = box.values.toList();
-    for(final Todo todo in todoList) {
+    for (final Todo todo in todoList) {
       print('title: ${todo.title}');
     }
   }
