@@ -6,6 +6,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'journey/home/home_screen.dart';
 import 'journey/weather/weather_screen.dart';
+import 'routes.dart';
 
 class MyApp extends StatelessWidget {
   MyApp({super.key});
@@ -22,12 +23,7 @@ class MyApp extends StatelessWidget {
           primarySwatch: Colors.blue,
         ),
         initialRoute: AppRoutes.home,
-        routes: {
-          AppRoutes.home: (context) => const HomeScreen(),
-          AppRoutes.weather: (context) => BlocProvider<WeatherBloc>(
-              create: (context) => WeatherBloc()..initial(),
-              child: WeatherScreen()),
-        },
+        onGenerateRoute: Routes.generateRoute,
       ),
     );
   }
