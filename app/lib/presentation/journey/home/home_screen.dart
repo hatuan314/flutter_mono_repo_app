@@ -31,7 +31,27 @@ class HomeScreen extends StatelessWidget {
                 child: AppImageWidget(
                   path: ImageConstants.icWeather,
                   width: 28.sp,
-                ))
+                )),
+            AppTouchable(
+                width: 52.sp,
+                height: 52.sp,
+                onPressed: () {
+                  Navigator.pushNamed(context, AppRoutes.countries);
+                },
+                child: AppImageWidget(
+                  path: ImageConstants.icGlobal,
+                  width: 28.sp,
+                )),
+            AppTouchable(
+                width: 52.sp,
+                height: 52.sp,
+                onPressed: () {
+                  Navigator.pushNamed(context, AppRoutes.images);
+                },
+                child: AppImageWidget(
+                  path: ImageConstants.icGallery,
+                  width: 28.sp,
+                )),
           ],
         ),
       ), // This trailing comma makes auto-formatting nicer for build methods.

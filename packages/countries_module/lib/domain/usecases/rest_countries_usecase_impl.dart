@@ -8,9 +8,6 @@ class RestCountriesUseCaseImpl implements RestCountriesUseCase {
   RestCountriesUseCaseImpl({required this.restCountriesRepo});
 
   @override
-  Future<RestCountryEntity> getVnFullName() {
-    // TODO: implement getVnFullName
-    throw UnimplementedError();
-  }
+  Future<RestCountryEntity> getVnFullName() => restCountriesRepo.getVnFullName();
 
 }
