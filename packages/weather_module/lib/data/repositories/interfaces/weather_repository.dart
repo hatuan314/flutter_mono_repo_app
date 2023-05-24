@@ -1,5 +1,5 @@
-import 'package:weather_module/domain/models/weather_data_entity.dart';
+import 'package:weather_module/data/models/open_weather_model.dart';
 
 abstract class WeatherRepository {
-  Future<WeatherDataEntity> getCurrentWeather(double long, double lat);
+  Future<OpenWeatherModel> getCurrentWeather(double long, double lat);
 }

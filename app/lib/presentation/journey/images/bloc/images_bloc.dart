@@ -1,5 +1,5 @@
 import 'package:app/domain/entities/image_entity.dart';
-import 'package:app/domain/usecases/images_usecase.dart';
+import 'package:app/domain/usecases/interface/images_usecase.dart';
 import 'package:app/presentation/journey/images/bloc/images_state.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

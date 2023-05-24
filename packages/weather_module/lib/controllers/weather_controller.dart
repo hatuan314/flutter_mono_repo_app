@@ -1,7 +1,7 @@
 import 'package:geolocator/geolocator.dart';
 import 'package:weather_module/common/injection/app_injection.dart';
-import 'package:weather_module/domain/models/weather_data_entity.dart';
-import 'package:weather_module/domain/usecases/interfaces/weather_usecase.dart';
+import 'package:weather_module/data/models/open_weather_model.dart';
+import 'package:weather_module/data/repositories/interfaces/weather_repository.dart';
 
 class WeatherController {
   Future<Position> _getCurrentPosition() async {
@@ -41,10 +41,10 @@ class WeatherController {
     return await Geolocator.getCurrentPosition();
   }
 
-  Future<WeatherDataEntity> getCurrentWeather() async {
+  Future<OpenWeatherModel> getCurrentWeather() async {
     Position currentPosition = await _getCurrentPosition();
     double lat = currentPosition.latitude;
     double long = currentPosition.longitude;
-    return getIt<WeatherUseCase>().getCurrentWeather(lat, long);
+    return getIt<WeatherRepository>().getCurrentWeather(lat, long);
   }
 }

@@ -1,9 +1,8 @@
 import 'package:countries_module/common/injection/app_injection.dart';
-import 'package:countries_module/domain/entities/rest_country_entity.dart';
-import 'package:countries_module/domain/usecases/rest_countries_usecase.dart';
+import 'package:countries_module/data/models/rest_country_model.dart';
+import 'package:countries_module/data/repositories/rest_countries_repository.dart';
 
 class CountriesController {
-  Future<RestCountryEntity> getVnCountryFullName() async {
-    return getIt<RestCountriesUseCase>().getVnFullName();
-  }
+  Future<RestCountryModel?> getVnCountryFullName() =>
+      getIt<RestCountriesRepository>().getVnFullName();
 }

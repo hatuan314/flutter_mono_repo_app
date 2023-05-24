@@ -1,13 +1,13 @@
-import 'package:countries_module/domain/entities/rest_country_entity.dart';
+import 'package:app/domain/entities/country_entity.dart';
 import 'package:equatable/equatable.dart';
 
 class CountriesState extends Equatable {
   bool? isLoading;
-  RestCountryEntity? country;
+  CountryEntity? country;
 
   CountriesState({this.isLoading, this.country});
 
-  CountriesState copyWith({bool? isLoading, RestCountryEntity? country}) =>
+  CountriesState copyWith({bool? isLoading, CountryEntity? country}) =>
       CountriesState(
           isLoading: isLoading ?? this.isLoading,
           country: country ?? this.country);
