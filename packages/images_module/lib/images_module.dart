@@ -1,10 +1,5 @@
 library images_module;
 
-import 'package:images_module/common/injection/app_injection.dart';
-
-/// A Calculator.
-class ImagesModule {
-  static void initial() {
-    configLocator();
-  }
-}
+export 'src/image_module.dart';
+export 'src/controllers/export.dart';
+export 'src/data/models/export.dart';

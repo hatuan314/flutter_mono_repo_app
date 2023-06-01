@@ -1,4 +1,4 @@
-import 'package:weather_module/data/models/open_weather_model.dart';
+import 'package:weather_module/weather_module.dart';
 
 class WeatherEntity {
   List<Weather>? weather;

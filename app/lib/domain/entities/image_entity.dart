@@ -1,4 +1,4 @@
-import 'package:images_module/data/models/unsplash_image_model.dart';
+import 'package:images_module/images_module.dart';
 
 class ImageEntity {
   String? description;

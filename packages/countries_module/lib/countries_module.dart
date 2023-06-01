@@ -1,10 +1,5 @@
 library countries_module;
 
-import 'common/injection/app_injection.dart';
-
-/// A Calculator.
-class CountriesModule {
-  static void initial() {
-    configLocator();
-  }
-}
+export 'src/country_module.dart';
+export 'src/controllers/export.dart';
+export 'src/data/models/export.dart';

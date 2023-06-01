@@ -1,10 +1,5 @@
 library weather_module;
 
-import 'common/injection/app_injection.dart';
-
-/// A Calculator.
-class WeatherModule {
-  static void initial() {
-    configLocator();
-  }
-}
+export 'src/weather_module.dart';
+export 'src/controllers/export.dart';
+export 'src/data/models/export.dart';

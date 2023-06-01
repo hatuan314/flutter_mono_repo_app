@@ -1,4 +1,4 @@
-import 'package:countries_module/data/models/rest_country_model.dart';
+import 'package:countries_module/countries_module.dart';
 
 class CountryEntity {
   Name? name;
