@@ -1,4 +1,5 @@
-import 'package:app/common/utils/app_utils.dart';
+import 'package:utils_module/utils_module.dart';
+
 import 'package:app/domain/entities/image_entity.dart';
 import 'package:app/domain/usecases/interface/images_usecase.dart';
 import 'package:images_module/images_module.dart';

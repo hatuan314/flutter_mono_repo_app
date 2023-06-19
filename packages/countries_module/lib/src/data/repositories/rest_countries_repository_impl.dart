@@ -1,7 +1,7 @@
-import 'package:countries_module/src/common/utils/app_utils.dart';
 import 'package:countries_module/src/data/datasources/rest_countries_datasource.dart';
 import 'package:countries_module/src/data/models/base_response.dart';
 import 'package:countries_module/src/data/models/rest_country_model.dart';
+import 'package:utils_module/utils_module.dart';
 import 'rest_countries_repository.dart';
 
 class RestCountriesRepositoryImpl implements RestCountriesRepository {

@@ -4,12 +4,13 @@ import 'dart:io';
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:dio/dio.dart';
 import 'package:pretty_dio_logger/pretty_dio_logger.dart';
+import 'package:utils_module/utils_module.dart';
 import 'package:weather_module/src/common/constants/enums.dart';
 import 'package:weather_module/src/data/models/base_response.dart';
 
 import 'package:weather_module/.env.dart';
 
-import '../../common/utils/app_utils.dart';
+import '../../common/utils/app_logger.dart';
 
 class ApiClient {
   static const contentType = 'Content-Type';

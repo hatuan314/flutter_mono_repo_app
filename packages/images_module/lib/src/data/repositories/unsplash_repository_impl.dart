@@ -1,8 +1,9 @@
-import 'package:images_module/src/common/utils/app_utils.dart';
+import 'package:images_module/src/common/utils/app_logger.dart';
 import 'package:images_module/src/data/datasources/unsplash_datasouce.dart';
 import 'package:images_module/src/data/models/base_response.dart';
 import 'package:images_module/src/data/models/unsplash_image_model.dart';
 import 'package:images_module/src/data/repositories/unsplash_repository.dart';
+import 'package:utils_module/utils_module.dart';
 
 class UnsplashRepositoryImpl implements UnsplashRepository {
   final UnsplashDataSource unsplashDs;

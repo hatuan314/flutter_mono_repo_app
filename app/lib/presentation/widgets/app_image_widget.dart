@@ -2,7 +2,7 @@ import 'dart:io';
 
 import 'package:app/common/constants/app_dimens.dart';
 import 'package:app/common/constants/image_constants.dart';
-import 'package:app/common/utils/app_utils.dart';
+import 'package:utils_module/utils_module.dart';
 import 'package:app/presentation/theme/theme_color.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';

@@ -3,10 +3,11 @@ import 'dart:io';
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:dio/dio.dart';
 import 'package:images_module/src/common/constants/enums.dart';
-import 'package:images_module/src/common/utils/app_utils.dart';
+import 'package:images_module/src/common/utils/app_logger.dart';
 import 'package:images_module/src/data/models/base_response.dart';
 import 'package:pretty_dio_logger/pretty_dio_logger.dart';
 import 'package:images_module/src/.env.dart';
+import 'package:utils_module/utils_module.dart';
 
 
 class ApiClient {

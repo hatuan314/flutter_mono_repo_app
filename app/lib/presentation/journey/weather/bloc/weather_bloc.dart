@@ -1,4 +1,5 @@
-import 'package:app/common/utils/app_utils.dart';
+import 'package:app/common/utils/app_logger.dart';
+
 import 'package:app/domain/entities/weather_usecase.dart';
 import 'package:app/domain/usecases/interface/weather_usecase.dart';
 import 'package:app/presentation/journey/weather/bloc/weather_state.dart';
