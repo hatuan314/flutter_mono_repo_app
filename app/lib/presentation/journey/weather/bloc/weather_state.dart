@@ -1,4 +1,4 @@
-import 'package:app/domain/entities/weather_usecase.dart';
+import 'package:app/domain/entities/weather_entity.dart';
 import 'package:equatable/equatable.dart';
 
 class WeatherState extends Equatable {

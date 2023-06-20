@@ -1,4 +1,4 @@
-import 'package:app/domain/entities/weather_usecase.dart';
+import 'package:app/domain/entities/weather_entity.dart';
 import 'package:app/domain/usecases/interface/weather_usecase.dart';
 import 'package:weather_module/weather_module.dart';
 

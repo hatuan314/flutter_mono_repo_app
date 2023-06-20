@@ -29,8 +29,8 @@ class HomeScreen extends StatelessWidget {
                   Navigator.pushNamed(context, AppRoutes.weather);
                 },
                 child: AppImageWidget(
-                  path: ImageConstants.icWeather,
-                  width: 28.sp,
+                  path: ImageConstants.icSunClouds,
+                  // width: 48.sp,
                 )),
             AppTouchable(
                 width: 52.sp,
