@@ -13,4 +13,16 @@ class CountriesUseCaseImpl implements CountriesUseCase {
     return null;
   }
 
+  @override
+  Future<List<CountryEntity>> getAll() async {
+    List<RestCountryModel> list = await CountriesController().getAll();
+    List<CountryEntity> countries = [];
+    if (!isNullEmptyList(list)) {
+      for (final RestCountryModel element in list) {
+        countries.add(CountryEntity.fromRestCountryModel(element));
+      }
+    }
+    return countries;
+  }
+
 }

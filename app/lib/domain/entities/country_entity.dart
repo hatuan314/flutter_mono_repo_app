@@ -1,12 +1,18 @@
 import 'package:countries_module/countries_module.dart';
+import 'package:utils_module/utils/app_utils.dart';
 
 class CountryEntity {
   Name? name;
   String? region;
   String? subregion;
-  Languages? languages;
+  Map<String, dynamic>? languages;
   CoatOfArms? coatOfArms;
   Flags? flags;
+  String? capital;
+  int? population;
+  double? area;
+  Map<String, dynamic>? currency;
+  List<String>? timezones;
 
   CountryEntity(
       {this.name,
@@ -14,7 +20,12 @@ class CountryEntity {
       this.subregion,
       this.languages,
       this.coatOfArms,
-      this.flags});
+      this.flags,
+      this.capital,
+      this.population,
+      this.area,
+      this.currency,
+      this.timezones});
 
   factory CountryEntity.fromRestCountryModel(RestCountryModel model) =>
       CountryEntity(
@@ -23,5 +34,10 @@ class CountryEntity {
           subregion: model.subregion,
           languages: model.languages,
           coatOfArms: model.coatOfArms,
-          flags: model.flags);
+          flags: model.flags,
+          capital: isNullEmptyList(model.capital) ? '' : model.capital!.first,
+          population: model.population,
+          area: model.area ?? 0,
+          currency: model.currencies,
+          timezones: model.timezones);
 }

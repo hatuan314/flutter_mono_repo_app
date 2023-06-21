@@ -3,16 +3,16 @@ import 'package:equatable/equatable.dart';
 
 class CountriesState extends Equatable {
   bool? isLoading;
-  CountryEntity? country;
+  List<CountryEntity>? countries;
 
-  CountriesState({this.isLoading, this.country});
+  CountriesState({this.isLoading, this.countries});
 
-  CountriesState copyWith({bool? isLoading, CountryEntity? country}) =>
+  CountriesState copyWith({bool? isLoading, List<CountryEntity>? countries}) =>
       CountriesState(
           isLoading: isLoading ?? this.isLoading,
-          country: country ?? this.country);
+          countries: countries ?? this.countries);
 
   @override
   // TODO: implement props
-  List<Object?> get props => [isLoading, country];
+  List<Object?> get props => [isLoading, countries];
 }
